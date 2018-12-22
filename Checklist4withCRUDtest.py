@@ -141,7 +141,7 @@ label315.grid(row=14, column=0)
 
 def gmccheck():
     webbrowser.open_new(r"http://odssysmonweb.odsdai.netdai.com/SuperMon/#batchless/v2")
-button400 = Button(text="Check CVS PARTD Error", command=gmccheck)
+button400 = Button(text="Check GMC Threads", command=gmccheck)
 button400.grid(row=15, column=1, sticky=W)
 label400 = Label(root, text="4:30 AM")
 label400.grid(row=15, column=0)
