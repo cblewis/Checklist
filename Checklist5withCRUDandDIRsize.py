@@ -9,7 +9,7 @@ import time
 #Masterfully crafted by Cameron Lewis
 
 root = Tk()
-root.title('NOC Night Shift Checklist, Links & CRUD Testing Tool')
+root.title('NOC Night Shift Checklist, Links, Directory Size Measurement & CRUD Testing Tool')
 #root.configure(background='#6794a9')
 
 menu = Menu(root)
@@ -170,11 +170,8 @@ button10.grid(row=19, column=1, sticky=W)
 labelfirstlogiccheck = Label(root, text="SAT, 3:30 AM")
 labelfirstlogiccheck.grid(row=19, column=0)
 
-theLabelseparator1 = Label(root, text="------------------------------------------------------------")
-theLabelseparator1.grid(row=20, columnspan=2)
-
 button2 = Button(text="Press this button to exit.", command=exit)
-button2.grid(row=21, column=1, sticky=E)
+button2.grid(row=20, column=1)
 
 
 #CRUD Testing below
