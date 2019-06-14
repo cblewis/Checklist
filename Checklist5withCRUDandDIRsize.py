@@ -73,6 +73,17 @@ def oneamcheck():
     path2 = r"\\ODSEFTFS\Usr_Temp"
     os.startfile(path2)
     os.path.join(path2)
+    try:
+        total_size = 0
+        start_path = path2
+        for path, dirs, files in os.walk(start_path):
+            for f in files:
+                fp = os.path.join(path, f)
+                total_size += os.path.getsize(fp)
+        textBox.insert(END, "Directory size is " + str(total_size) + " bytes large.\n")
+    except AssertionError as error:
+        textBox.insert(END, error + "\n")
+        textBox.insert(END, "ERROR: Either no directory was found or the measuring process failed.\n")
 button3 = Button(text="Check ODSEFTFS Directory", command=oneamcheck)
 button3.grid(row=7, column=1, sticky=W)
 label100 = Label(root, text="1:00 AM")
